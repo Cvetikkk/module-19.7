@@ -80,7 +80,8 @@ def test_post_add_photo_of_pet():
     status, result = pets.post_add_photo_of_pet(auth_key, pet_id, pet_photo)
     print(result)
     assert status == 200
-    assert result['name']
+    assert result['name'] == "Борис"
+    # Тест провалился, мы все сделали верно
     assert result['id'] == pet_id
     assert result['pet_photo']
 
